@@ -33,24 +33,6 @@ app.get('/', function(req, res) {
     res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
 
-app.get('/setup', function(req, res) {
-
-  // create a sample user
-  var nick = new User({
-    name: 'Kimberly Brady',
-    password: 'password',
-    admin: true
-  });
-
-  // save the sample user
-  nick.save(function(err) {
-    if (err) throw err;
-
-    console.log('User saved successfully');
-    res.json({ success: true });
-  });
-});
-
 // API ROUTES -------------------
 
 // get an instance of the router for api routes
@@ -139,9 +121,26 @@ apiRoutes.get('/users', function(req, res) {
   });
 });
 
+apiRoutes.get('/setup', function(req, res) {
+
+  // create a sample user
+  var nick = new User({
+    name: 'Test User',
+    password: 'password',
+    admin: true
+  });
+
+  // save the sample user
+  nick.save(function(err) {
+    if (err) throw err;
+
+    console.log('User saved successfully');
+    res.json({ success: true });
+  });
+});
+
 // apply the routes to our application with the prefix /api
 app.use('/api', apiRoutes);
-
 
 
 // =======================
