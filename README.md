@@ -8,11 +8,11 @@ bash command line.
 The next step is to install the packages we will need to run our application so once again we turn to our friendly bash shell:  `npm install express body-parser morgan mongoose jsonwebtoken --save` where
 
 
-o  express is the popular Node framework
-o  mongoose is how we interact with our MongoDB database
-o  morgan will log requests to the console so we can see what is happening
-o  body-parser will let us get parameters from our POST requests
-o  jsonwebtoken is how we create and verify our JSON Web Tokens
+1. express is the popular Node framework
+2.  mongoose is how we interact with our MongoDB database
+3.  morgan will log requests to the console so we can see what is happening
+4.  body-parser will let us get parameters from our POST requests
+5.  jsonwebtoken is how we create and verify our JSON Web Tokens
 
 
 Use nodemon to have your server restart on file changes. Install nodemon using `sudo npm install -g nodemon`. Then start your server with `nodemon server.js`
