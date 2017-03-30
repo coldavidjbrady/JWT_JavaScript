@@ -31,5 +31,5 @@ An instance of a router is defined in server.js:  `var apiRoutes = express.Route
 
 Retrieving users or creating a new user requires a token. The token can be generated using the /authenticate endpoint which can then be passed in one of two ways:
 
-Browser:  http://localhost:8080/api/setup?token=MySuperLongToken
-Postman:  Adding a header of "x-access-token" with the value being the token
+1.  Browser:  http://localhost:8080/api/setup?token=MySuperLongToken
+2.  Postman:  Adding a header of "x-access-token" with the value being the token
